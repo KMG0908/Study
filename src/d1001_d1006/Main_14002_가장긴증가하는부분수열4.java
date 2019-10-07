@@ -31,7 +31,6 @@ public class Main_14002_가장긴증가하는부분수열4 {
 		
 		int max = 0;
 		int index = 0;
-		dp[0] = 1;
 		
 		for(int i=0; i<n; i++) {
 			dp[i] = 1;
@@ -59,9 +58,8 @@ public class Main_14002_가장긴증가하는부분수열4 {
 		}
 		
 		Collections.sort(list);
-		int size = list.size();
-		for(int i=0; i<size; i++) {
-			System.out.print(list.get(i) + " ");
+		for(int tmp : list) {
+			System.out.print(tmp + " ");
 		}
 	}
 }
