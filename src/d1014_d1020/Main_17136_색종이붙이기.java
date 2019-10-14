@@ -1,4 +1,4 @@
-package backjoon;
+package d1014_d1020;
 
 import java.io.BufferedReader;
 import java.io.IOException;
