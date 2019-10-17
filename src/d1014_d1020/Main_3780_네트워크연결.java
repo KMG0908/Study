@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main_3780_네트워크연결 {
-	static int parents[], value[][];
+	static int parents[], value[];
 	
 	public static void make() {
 		Arrays.fill(parents, -1);
@@ -16,18 +16,17 @@ public class Main_3780_네트워크연결 {
 	public static int find(int a) {
 		if(parents[a] < 0) return a;
 		
-		return parents[a] = find(parents[a]);
+		int tmp = find(parents[a]);
+		value[a] += value[parents[a]];
+		parents[a] = tmp;
+		
+		return tmp;
 	}
 	
-	public static boolean union(int a, int b) {
-		int aRoot = find(a);
-		int bRoot = find(b);
-		
-		if(aRoot == bRoot) return false;
-		
-		parents[aRoot] = bRoot;
-		
-		return true;
+	// 센터 A를 기업 B에 연결 -> 이때 A의 센터는 B의 센터가 됨
+	public static void union(int a, int b) {
+		value[a] = Math.abs(a - b) % 1000;
+		parents[a] = b;
 	}
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -39,7 +38,7 @@ public class Main_3780_네트워크연결 {
 			int n = Integer.parseInt(br.readLine());
 			
 			parents = new int[n + 1];
-			value = new int[n + 1][n + 1];
+			value = new int[n + 1];
 			make();
 			
 			while(true) {
@@ -49,18 +48,16 @@ public class Main_3780_네트워크연결 {
 				
 				if(oper.equals("E")) {
 					int a = Integer.parseInt(st.nextToken());
+					find(a);
+					System.out.println(value[a]);
 				}
 				else if(oper.equals("I")) {
 					int a = Integer.parseInt(st.nextToken());
 					int b = Integer.parseInt(st.nextToken());
 					
-					if(union(a, b)) {
-						
-					}
-					System.out.println(Arrays.toString(parents));
+					union(a, b);
 				}
 				else break;
-				
 			}
 		}
 	}
