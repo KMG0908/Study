@@ -17,12 +17,9 @@ public class Main_2577_회전초밥고 {
 		int c = Integer.parseInt(st.nextToken());
 		
 		int[] sushi = new int[n];
-		// 벨트 위에 있는 초밥
-		boolean[] belt = new boolean[d + 1];
 		
 		for(int i=0; i<n; i++) {
 			sushi[i] = Integer.parseInt(br.readLine());
-			belt[sushi[i]] = true;
 		}
 		
 		int ans = 0;
