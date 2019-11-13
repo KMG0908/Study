@@ -58,7 +58,7 @@ public class Main_2577_회전초밥 {
 				use = true;
 			}
 			
-			ans = Math.min(ans, cnt);
+			ans = Math.max(ans, cnt);
 		}
 		
 		System.out.println(ans);
