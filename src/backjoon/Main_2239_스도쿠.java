@@ -63,7 +63,7 @@ public class Main_2239_스도쿠 {
 			if(sudoku[x][y] == sudoku[x][j]) return false;
 		}
 		
-		// 3 * 3
+		// 3 * 3 영역
 		int iStart = x / 3 * 3;
 		int iEnd = iStart + 3;
 		int jStart = y / 3 * 3;
