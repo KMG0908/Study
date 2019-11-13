@@ -17,7 +17,6 @@ public class Solution_5656_벽돌깨기 {
 		
 		int testCase = Integer.parseInt(br.readLine());
 		
-		
 		for(int t=1; t<=testCase; t++) {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 			n = Integer.parseInt(st.nextToken());
@@ -132,6 +131,7 @@ public class Solution_5656_벽돌깨기 {
 				if(copy[x][y] != 0) cnt++;
 			}
 		}
+		
 		min = Math.min(min, cnt);
 	}
 }
