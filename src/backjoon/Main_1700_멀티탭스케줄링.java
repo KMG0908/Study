@@ -24,7 +24,7 @@ public class Main_1700_멀티탭스케줄링 {
 		}
 		
 		int[] order = new int[k];		// 사용해야 하는 물건 순서
-		int[] used = new int[k + 1];		// 해당 물건을 사용한 횟수
+		int[] used = new int[k + 1];	// 해당 물건을 사용한 횟수
 		int[] total = new int[k + 1];	// 해당 물건을 총 사용해야 하는 횟수
 		
 		st = new StringTokenizer(br.readLine(), " ");
