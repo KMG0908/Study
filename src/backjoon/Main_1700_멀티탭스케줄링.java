@@ -24,7 +24,7 @@ public class Main_1700_멀티탭스케줄링 {
 		}
 		
 		int[] order = new int[k];		// 사용해야 하는 물건 순서
-		int[] idx = new int[k + 1];		// 해당 물건을 사용한 횟수
+		int[] used = new int[k + 1];		// 해당 물건을 사용한 횟수
 		int[] total = new int[k + 1];	// 해당 물건을 총 사용해야 하는 횟수
 		
 		st = new StringTokenizer(br.readLine(), " ");
@@ -34,40 +34,39 @@ public class Main_1700_멀티탭스케줄링 {
 			total[order[i]]++;
 		}
 		
-		HashSet<Integer> use = new HashSet<>();
+		HashSet<Integer> using = new HashSet<>();
 		
 		int ans = 0;
 		
 		for(int i=0; i<k; i++) {
-			if(use.size() < n) use.add(order[i]);
+			if(using.size() < n) using.add(order[i]);
 			else {
-				if(!use.contains(order[i])) {
-					int max = 0;
+				if(!using.contains(order[i])) {
+					int lastIdx = 0;
 					int removeKey = 0;
 					
-					for(int key : use) {
-						if(idx[key] < total[key]) {
-							int nextIdx = map.get(key).get(idx[key]);
-							if(nextIdx > max) {
-								max = nextIdx;
+					for(int key : using) {
+						if(used[key] < total[key]) {	// 해당 물건을 나중에 사용해야 한다면
+							int nextIdx = map.get(key).get(used[key]);	// 해당 물건이 다음에 사용되는 때
+							if(nextIdx > lastIdx) {
+								lastIdx = nextIdx;
 								removeKey = key;
 							}
 						}
-						else {
+						else {							// 해당 물건은 더 이상 사용할 수 없으므로 제거해도 ok
 							removeKey = key;
 							break;
 						}
 					}
 					
-					System.out.println("removeKey: " + removeKey);
-					use.remove(removeKey);
-					use.add(order[i]);
+					using.remove(removeKey);
+					using.add(order[i]);
 					
 					ans++;
 				}
 			}
 			
-			idx[order[i]]++;
+			used[order[i]]++;
 		}
 		
 		System.out.println(ans);
