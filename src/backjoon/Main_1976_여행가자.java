@@ -37,12 +37,12 @@ public class Main_1976_여행가자 {
 		parents = new int[n+1];
 		make();
 		
-		for(int i=0; i<n; i++) {
+		for(int i=1; i<=n; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-			for(int j=0; j<n; j++) {
+			for(int j=1; j<=n; j++) {
 				int city_connect = Integer.parseInt(st.nextToken());
 				
-				if(city_connect == 1) union(i+1, j+1);
+				if(city_connect == 1) union(i, j);
 			}
 		}
 		
