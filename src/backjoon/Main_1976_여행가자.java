@@ -42,6 +42,7 @@ public class Main_1976_여행가자 {
 			for(int j=1; j<=n; j++) {
 				int city_connect = Integer.parseInt(st.nextToken());
 				
+				// 1이면 연결된 것이므로 합치기
 				if(city_connect == 1) union(i, j);
 			}
 		}
@@ -49,14 +50,16 @@ public class Main_1976_여행가자 {
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		
 		int travel = Integer.parseInt(st.nextToken());
+		// 제일 첫 경로의 부모 찾기
 		int f = find(travel);
 		
 		for(int i=1; i<m; i++) {
 			travel = Integer.parseInt(st.nextToken());
 			
+			// 갈 수 있다면 제일 첫 경로의 부모와 지나가는 경로의 부모가 같을 것임
 			if(f != find(travel)) {
 				System.out.println("NO");
-				System.exit(-1);
+				System.exit(0);
 			}
 		}
 		
