@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+// 커밋 메세지 수정
 public class Main_2178_미로탐색 {
 	public static int n, m, dir[][] = { {1, 0}, {-1, 0}, {0, 1}, {0, -1} };
 	public static char maze[][];
