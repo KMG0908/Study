@@ -100,10 +100,10 @@ public class Main_1938_통나무옮기기 {
 						
 					if(flag) {
 						queue.offer(tmp);
+						direction.offer(d);
 						for(int k=0; k<3; k++) {
 							visited[d][tmp[k].x][tmp[k].y] = true;
 						}
-						direction.offer(d);
 					}
 				}
 				
@@ -118,10 +118,10 @@ public class Main_1938_통나무옮기기 {
 						tmp[2] = new Location(centerX + 1, centerY);
 						
 						queue.offer(tmp);
+						direction.offer((d + 1) % 2);
 						for(int k=0; k<3; k++) {
 							visited[(d + 1) % 2][tmp[k].x][tmp[k].y] = true;
 						}
-						direction.offer((d + 1) % 2);
 					}
 				}
 				else if(location[0].y == location[1].y && location[1].y == location[2].y) {
@@ -135,10 +135,10 @@ public class Main_1938_통나무옮기기 {
 						tmp[2] = new Location(centerX, centerY + 1);
 						
 						queue.offer(tmp);
+						direction.offer((d + 1) % 2);
 						for(int k=0; k<3; k++) {
 							visited[(d + 1) % 2][tmp[k].x][tmp[k].y] = true;
 						}
-						direction.offer((d + 1) % 2);
 					}
 				}
 			}
