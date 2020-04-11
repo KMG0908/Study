@@ -19,8 +19,8 @@ public class Main_2579_계단오르기 {
 		
 		int[] dp = new int[n];
 		dp[0] = stairs[0];
-		dp[1] = Math.max(stairs[0] + stairs[1], stairs[1]);
-		dp[2] = Math.max(stairs[0] + stairs[2], stairs[1] + stairs[2]);
+		if(n > 1) dp[1] = Math.max(stairs[0] + stairs[1], stairs[1]);
+		if(n > 2) dp[2] = Math.max(stairs[0] + stairs[2], stairs[1] + stairs[2]);
 		
 		for(int i=3; i<n; i++) {
 			// 마지막 계단의 전 계단을 밟고 올라온 경우 => 그 전전 계단은 밟지 않아야 함 => dp[i-3] + stairs[i-1] + stairs[i]
