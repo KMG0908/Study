@@ -70,9 +70,8 @@ JPAQuery<Novel> query =
 하고 나니까 진짜..... 별 거 아닌데 아무래도 JPQL도 그렇고 Querydsl도 그렇고 처음 다뤄서 그런지 많이 헤매게 되는 것 같다. 이것도 점차 나아지겠지....  
 
 ## 20200515
-likes로 별칭을 준 걸 바탕으로 order by를 하고 싶었는데 별칭 준 거 앞에 계속해서 테이블 이름(`novel.likes`)이 붙어서 에러가 났다.  
-해결 방법은 생각보다 간단했다.
+likes로 별칭을 준 걸 바탕으로 order by를 하고 싶었는데 별칭 준 거 앞에 계속해서 테이블 이름(`novel.likes`)이 붙어서 에러가 났다. 해결 방법은 생각보다 간단했다.
 ```
 NumberPath<Long> likes = Expressions.numberPath(Long.class, "likes"); 
 ```
-선언 후에 `ExpressionUtils.as` 부분에  `"likes"`를 선언한 변수 `likes`로 바꾼 뒤 `order by(likes)`로 하니까 끝!
+선언 후에 `ExpressionUtils.as` 부분에 `"likes"`를 선언한 변수 `likes`로 바꾼 뒤 `order by(likes)`로 하니까 끝!
