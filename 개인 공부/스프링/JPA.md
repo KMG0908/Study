@@ -1,0 +1,53 @@
+# 객체를 직렬화해서 저장하기
+http://redutan.github.io/2018/05/29/ddd-values-on-jpa 이 글을 참고했다. 하나의 컬럼에 json 형식으로 있으면 되서, 첫번째 방법으로 구현했다.
+
+Character.java
+```java
+@Convert(converter = CharacterAdditionalConverter.class)
+@Column(name = "character_more", nullable = true, length = 4000)
+private Set<Additional> characterMore = new HashSet<>();
+```
+
+Additional.java
+```java
+@Embeddable
+@Value
+public class Additional implements Serializable {
+    String key;
+    String value;
+	
+    @JsonCreator
+    public Additional(@JsonProperty("key") String key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+    }
+}
+```
+
+CharacterAdditionalConverter.java
+```java
+@Converter
+public class CharacterAdditionalConverter implements AttributeConverter<Set<Additional>, String> {
+    private ObjectMapper om = new ObjectMapper();
+
+    @Override
+    public String convertToDatabaseColumn(Set<Additional> attribute) {
+        try {
+            return om.writeValueAsString(attribute);
+        } catch (JsonProcessingException e) {
+            throw new IllegalArgumentException("error log...");
+        }
+    }
+
+    @Override
+    public Set<Additional> convertToEntityAttribute(String dbData) {
+        try {
+            return om.readValue(dbData, new TypeReference<Set<Additional>>() { });
+        } catch (JsonProcessingException e) {
+            throw new IllegalArgumentException("error log...");
+        }
+    }
+}
+```
+
+아직 이 부분만 구현하고 dto와 service를 설계하지 않아서 이걸로 되는지는 나중에 확인할 수 있을 것 같다...
