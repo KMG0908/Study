@@ -51,3 +51,4 @@ public class CharacterAdditionalConverter implements AttributeConverter<Set<Addi
 ```
 
 아직 이 부분만 구현하고 dto와 service를 설계하지 않아서 이걸로 되는지는 나중에 확인할 수 있을 것 같다...
+>> dto와 service 구현 후 스웨거로 테스트해봤는데 문제없이 DB에 들어간다...!!!
