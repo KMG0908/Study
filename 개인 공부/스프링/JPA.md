@@ -51,4 +51,8 @@ public class CharacterAdditionalConverter implements AttributeConverter<Set<Addi
 ```
 
 아직 이 부분만 구현하고 dto와 service를 설계하지 않아서 이걸로 되는지는 나중에 확인할 수 있을 것 같다...
->> dto와 service 구현 후 스웨거로 테스트해봤는데 문제없이 DB에 들어간다...!!!
+> dto와 service 구현 후 스웨거로 테스트해봤는데 문제없이 DB에 들어간다...!!!
+
+# @CreatedDate, @LastModifiedDate
+LocalDateTime, ZonedDateTime 다 사용해봤는데 스웨거에서는 잘 나오는데 워크벤치로 확인해보니까 제대로 안 나오더라.  
+뭐가 문제지 계속 찾아봤었는데 워크벤치에서만 그럴 뿐 get 해올 때도 스웨거에서만 그런 거 보니까 mysql 서버 타임존 설정 때문에 그런것 같다.
