@@ -56,3 +56,12 @@ public class CharacterAdditionalConverter implements AttributeConverter<Set<Addi
 # @CreatedDate, @LastModifiedDate
 LocalDateTime, ZonedDateTime 다 사용해봤는데 스웨거에서는 잘 나오는데 워크벤치로 확인해보니까 제대로 안 나오더라.  
 뭐가 문제지 계속 찾아봤었는데 워크벤치에서만 그럴 뿐 get 해올 때도 스웨거에서만 그런 거 보니까 mysql 서버 타임존 설정 때문에 그런것 같다.
+
+# Json > Set
+```
+Illegal argument on static metamodel field injection : com.ssafy.model.entity.Character_#characterMore; expected type :  org.hibernate.metamodel.model.domain.internal.SingularAttributeImpl; encountered type : javax.persistence.metamodel.SetAttribute
+```
+로컬에서 돌렸을 때는 아무런 에러도 안 떴던 것 같은데, 배포를 하는 도중에 이러한 에러가 발생했다고 이슈가 들어왔다.  
+여전히 내 로컬에서는 에러가 안 떴지만, IntelliJ에서도 똑같은 오류가 발생하더라.  
+기능도 문제없이 돌아가고, 찾아보니까 실제 오류가 영향을 끼치는 부분은 없다는 것 같아서 일단은 넘어갔다.  
+해결책은 일단 https://stackoverflow.com/questions/61385330/why-usage-attributeconverter-for-collection-lead-to-hhh015007-illegal-argument 이거에 가까워보이는데.... 나중에 해봐야 알 것 같다. 
