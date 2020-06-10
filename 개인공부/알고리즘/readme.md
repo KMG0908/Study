@@ -1,5 +1,5 @@
 ### 1. 정렬 알고리즘의 종류
-* Selection Sort
+* [Selection Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Selection%20Sort.md)
 * Bubble Sort
 * Quick Sort
 * Insertion Sort
