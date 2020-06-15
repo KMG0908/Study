@@ -4,7 +4,7 @@
 * [Quick Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Quick%20Sort.md)
 * [Insertion Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Insertion%20Sort.md)
 * [Shell Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Shell%20Sort.md)
-* Merge Sort
+* [Merge Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Merge%20Sort.md)
 * Heap Sort
 * Radix Sort
 
