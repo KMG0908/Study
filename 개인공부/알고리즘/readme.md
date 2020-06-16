@@ -5,8 +5,9 @@
 * [Insertion Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Insertion%20Sort.md)
 * [Shell Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Shell%20Sort.md)
 * [Merge Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Merge%20Sort.md)
-* Heap Sort
-* Radix Sort
+* [Heap Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Heap%20Sort.md)
+* [Counting Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Counting%20Sort.md)
+* [Radix Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Radix%20Sort.md)
 
 ### 2. 정렬 알고리즘 분류
 #### 1) 실행 방법에 따른 분류
@@ -31,6 +32,7 @@
 * 이미 정렬되어 있는 자료의 경우에는 Insertion Sort가 제일 빠르다. 이미 정렬되어 있는 경우 바로 앞자리 원소와 한 번만 비교하면 되기 때문이다.
 * O(n²) : Bubble Sort, Selection Sort, Insertion Sort, Shell Sort, Quick Sort  
 O(n log n) : Heap Sort, Merge Sort  
-O(kn) : Radix Sort (k는 자릿수, 자릿수가 적은 4바이트 정수에서나 제대로 된 성능을 낼 수 있다는 제약조건이 있다.)  
+O(kn) : Radix Sort (k는 자릿수, 자릿수가 적은 4바이트 정수에서나 제대로 된 성능을 낼 수 있다는 제약조건이 있다.) 
+O(n) : Counting Sort(Counting Sort는 보통 k=O(n)일 때 사용되기 때문에 시간 복잡도가 O(n)이다. n > k라고 하면 시간 복잡도는 O(n + k)가 된다. 
   
 > 본 글은 https://medium.com/@joongwon/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EC%B4%88-805391cb088e를 바탕으로 작성되었습니다.
