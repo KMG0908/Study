@@ -1,4 +1,4 @@
-* 스프링
+* [스프링](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9B%B9/%EC%8A%A4%ED%94%84%EB%A7%81.md)
 * Restful 개념
 * Restful API
 * Ajax
@@ -10,7 +10,5 @@
 * MVC 패턴
 * 우리가 웹서비스에 접근할 때 어떤 경로를 거치는지
 * React와 Vue의 차이점
-* DI, IOC
 * filter와 인터셉터의 차이점
 * DispatcherServlet은 무엇을 하는가?
-* AOP
