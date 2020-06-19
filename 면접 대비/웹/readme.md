@@ -1,6 +1,5 @@
 * [스프링](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9B%B9/%EC%8A%A4%ED%94%84%EB%A7%81.md)
-* Restful 개념
-* Restful API
+* [REST](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9B%B9/Rest.md)
 * Ajax
 * 어떠한 경우에 Post 방식을 사용하는 게 옳은가?
 * Session과 Token의 특징과 차이점
