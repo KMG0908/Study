@@ -36,4 +36,14 @@
 **부분 완료(Partially Committed)** : 트랜잭션의 마지막 연산까지 실행했지만, Commit 연산이 실행되기 직전의 상태  
 **완료(Committed)** : 트랜잭션이 성공적으로 종료되어 Commit 연산을 실행한 후의 상태
 
-> 이 글은 https://coding-factory.tistory.com/226 를 바탕으로 작성되었습니다.
+### 병행처리의 문제점
+#### 갱신 분실(Lost Update)
+2개 이상의 트랜잭션이 같은 데이터를 공유하여 갱신할 때 갱신 결과의 일부가 없어지는 현상 
+#### 모순성(Inconsistency)
+복수의 사용자가 동시에 같은 데이터를 갱신할 때 데이터베이스내의 데이터들이 상호 일치하지 않아 모순된 결과가 발생하는 현상 
+#### 연쇄 복귀(Cascading Rollback)
+병행수행되던 트랜잭션들 중 어느 하나에 문제가 생겨 Rollback되는 경우 다른 트랜잭션들도 함께 Rollback되는 현상 
+#### 비완료 의존성(Uncommitted Dependency)
+트랜잭션이 실패한 후 회복되기 전에 다른 트랜잭션이 실패한 결과를 참조하는 현상
+
+> 이 글은 https://coding-factory.tistory.com/226 와 https://androphil.tistory.com/335?category=455850 를 바탕으로 작성되었습니다.
