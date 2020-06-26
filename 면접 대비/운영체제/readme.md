@@ -1,6 +1,6 @@
-* 교착 상태(Deadlock) 해결법
-* 프로세스와 스레드의 차이
-* 멀티 프로세스 대신에 멀티 스레드를 사용하는 이유
-* 뮤텍스와 세마포어의 차이
-* 동기화 객체의 종류
-* Context Switching
+* [Context Switching](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Context%20Switching.md)
+* [교착상태](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Deadlock.md)
+* [멀티 프로세스와 멀티 스레드](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Multi%20Process%20and%20Multi%20Thread.md)
+* [뮤텍스와 세마포어](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Mutex%20and%20Semaphore.md)
+* [프로세스 동기화](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Process%20Synchronization.md)
+* [프로세스와 스레드](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Process%20and%20Thread.md)
