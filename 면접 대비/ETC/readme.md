@@ -1,2 +1,6 @@
-* 자바스크립트 ==와 ===의 차이
-* 팩토리 패턴의 장점
+* [자바스크립트 ==와 ===의 차이](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/ETC/%3D%3D%20and%20%3D%3D%3D.md)
+* [빅데이터 5V](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/ETC/Bigdata%205V.md)
+* [팩토리 패턴](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/ETC/Factory%20Pattern.md)
+* [React](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/ETC/React.md)
+* [Vue](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/ETC/Vue.md)
+* [SW 개발 생명주기](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/ETC/SW%20Development%20Life%20Cycle.md)
