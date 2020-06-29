@@ -1,13 +1,13 @@
 ### 1. 정렬 알고리즘의 종류
-* [Selection Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Selection%20Sort.md)
-* [Bubble Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Bubble%20Sort.md)
-* [Quick Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Quick%20Sort.md)
-* [Insertion Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Insertion%20Sort.md)
-* [Shell Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Shell%20Sort.md)
-* [Merge Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Merge%20Sort.md)
-* [Heap Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Heap%20Sort.md)
-* [Counting Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Counting%20Sort.md)
-* [Radix Sort](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Radix%20Sort.md)
+* [Selection Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Selection%20Sort.md)
+* [Bubble Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Bubble%20Sort.md)
+* [Quick Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Quick%20Sort.md)
+* [Insertion Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Insertion%20Sort.md)
+* [Shell Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Shell%20Sort.md)
+* [Merge Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Merge%20Sort.md)
+* [Heap Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Heap%20Sort.md)
+* [Counting Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Counting%20Sort.md)
+* [Radix Sort](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Radix%20Sort.md)
 
 ### 2. 정렬 알고리즘 분류
 #### 1) 실행 방법에 따른 분류
