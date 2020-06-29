@@ -5,6 +5,6 @@
 * [객체지향 프로그래밍(OOP)](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/OOP.md)
 * [데이터 타입](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/Type.md)
 * [final](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/final.md)
-* [싱글톤](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/싱글톤.md)
+* [싱글톤](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/singleton.md)
 * [C#과 Java의 차이점](https://www.elex.pe.kr/entry/Java-cf-C-Sharp)
 * [extends vs implements](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/extends%20vs%20implements.md)
