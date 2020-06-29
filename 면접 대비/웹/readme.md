@@ -1,4 +1,4 @@
-* [스프링](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9B%B9/%EC%8A%A4%ED%94%84%EB%A7%81.md)
+* [스프링](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9B%B9/Spring.md)
 * [REST](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9B%B9/Rest.md)
 * [Ajax](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9B%B9/Ajax.md)
 * [DispatcherServlet](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9B%B9/DispatcherServlet.md)
