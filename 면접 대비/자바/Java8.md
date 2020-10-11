@@ -72,7 +72,7 @@ stream2 = Arrays.stream(arr2)
 #### Calendar 클래스의 문제점
 1. Calendar 인스턴스는 immutable object가 아니라서 값이 수정될 수 있다.
 2. 윤초(leap second)와 같은 특별한 상황을 고려하지 않는다.
-3. Calendar 클래스에서는 월(month)을 나타낼 때 1~12가 아닌 0~11로 표현해야 한다.  
+3. Calendar 클래스에서는 월(month)을 나타낼 때 1 ~ 12가 아닌 0 ~ 11로 표현해야 한다.  
 => Java SE 8 버전에서는 위 문제점을 모두 해결한 java.time 패키지를 제공한다.
 ``` java
 LocalDate today = LocalDate.now();
