@@ -10,3 +10,5 @@
 
 ### equals
 * 비교하고자 하는 두 개의 대상의 값 자체를 비교한다.
+
+> 이 글은 https://coding-factory.tistory.com/536 를 바탕으로 작성되었습니다.
