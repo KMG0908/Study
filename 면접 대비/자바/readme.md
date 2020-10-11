@@ -8,3 +8,4 @@
 * [싱글톤](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/singleton.md)
 * [C#과 Java의 차이점](https://www.elex.pe.kr/entry/Java-cf-C-Sharp)
 * [extends vs implements](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/extends%20vs%20implements.md)
+* [== vs equals](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/%3D%3D%20vs%20equals.md)
