@@ -59,7 +59,7 @@ public class Dog extends Pet {
 ```
 
 ### 3. final 클래스
-클래스에 final을 선언하면 상속 자체가 안된다. 그냥 클래스 그대로 사용해야 한다. Util 형식의 클래스나 여러 상수 값을 모아둔 Constants 클래스을 final로 선언한다. 
+클래스에 final을 선언하면 상속 자체가 안된다. 그냥 클래스 그대로 사용해야 한다. Util 형식의 클래스나 여러 상수 값을 모아둔 Constants 클래스를 final로 선언한다. 
 ``` java
 public final class Pet {
 
