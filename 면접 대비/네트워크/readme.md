@@ -5,3 +5,4 @@
 * [IOCP](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/IOCP.md)
 * [OSI 7계층](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/OSI%207%20layers.md)
 * [TCP vs UDP](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/TCP%20vs%20UDP.md)
+* [URI vs URL vs URN](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/URI%20vs%20URL%20vs%20URN.md)
