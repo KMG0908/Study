@@ -1,7 +1,7 @@
 ## 프로세스(Process)와 스레드(Thread)
 ### 프로세스
 #### 개념
-* 운영체제로부터 자원을 할당받는 자원의 단위
+* 운영체제로부터 자원을 할당받는 작업의 단위
 #### 특징
 ![프로세스](https://gmlwjd9405.github.io/images/os-process-and-thread/process.png)
 * 각각 독립된 메모리 영역(Code, Data, Stack, Heap의 구조)을 할당받는다.
