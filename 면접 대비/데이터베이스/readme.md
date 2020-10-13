@@ -3,3 +3,4 @@
 * [NoSQL](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL.md)
 * [정규화](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Normalization.md)
 * [트랜잭션](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Transaction.md)
+* [Isolation Level](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Isolation%20Level.md)
