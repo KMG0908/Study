@@ -49,6 +49,6 @@
 교착 상태에 의한 성능 저하보다 이를 해결할 때의 성능 저하가 더 큰 경우 이를 무시한다.
 
 #### 5. 탐지(Detection)
-교착 상태를 참지한다.
+교착 상태를 탐지한다.
 
 > 이 글은 https://includestdio.tistory.com/12 와 https://junsday.tistory.com/32 를 바탕으로 작성되었습니다.
