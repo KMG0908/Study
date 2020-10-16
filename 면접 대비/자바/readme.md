@@ -9,4 +9,4 @@
 * [C#과 Java의 차이점](https://www.elex.pe.kr/entry/Java-cf-C-Sharp)
 * [extends vs implements](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/extends%20vs%20implements.md)
 * [== vs equals](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/%3D%3D%20vs%20equals.md)
-* [얕은 복사와 깊은 복사](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/%EC%96%95%EC%9D%80%20%EB%B3%B5%EC%82%AC%EC%99%80%20%EA%B9%8A%EC%9D%80%20%EB%B3%B5%EC%82%AC.md)
+* [얕은 복사와 깊은 복사](https://github.com/KMG0908/Study/blob/master/%EB%A9%B4%EC%A0%91%20%EB%8C%80%EB%B9%84/%EC%9E%90%EB%B0%94/Shallow%20Copy%20and%20Deep%20Copy.md)
