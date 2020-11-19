@@ -32,4 +32,4 @@ bump-the-pointer(할당된 메모리 가장 마지막의 다음 영역을 가리
 즉 **메모리 단편화**가 발생한다.  
 메모리 단편화를 없애기 위해 새로운 영역을 추가하다보니 Survivor 영역이 두 개가 된 것이다.
 
-> 이 글은 https://mirinae312.github.io/develop/2018/06/04/jvm_gc.html 와 https://perfectacle.github.io/2019/05/07/jvm-gc-basic/ 를 바탕으로 작성되었습니다.
+> 이 글은 https://mirinae312.github.io/develop/2018/06/04/jvm_gc.html 와 https://perfectacle.github.io/2019/05/07/jvm-gc-basic/#Survivor-Space 를 바탕으로 작성되었습니다.
