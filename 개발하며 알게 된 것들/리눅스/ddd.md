@@ -13,4 +13,18 @@
   * ```linux
     configure: error: Cannot find termcap compatible library.
     ```
-    그 이후에 발생한 위의 오류는 아직 해결하지 못하였다.
+    그 이후에 위와 같은 오류가 발생하였고 ```yum install ncurses-devel```로 해결하였다.
+#### 6. `make`
+  * ```linux
+    make[2]: *** [strclass.o] 오류 1
+    make[2]: Leaving directory `/home/ck0911.kim/ddd-3.3.12-20.sdl7.src/ddd-3.3.12/ddd'
+    make[1]: *** [all] 오류 2
+    make[1]: Leaving directory `/home/ck0911.kim/ddd-3.3.12-20.sdl7.src/ddd-3.3.12/ddd'
+    make: *** [all-recursive] 오류 1
+    ```
+    위 오류를 해결하기 위해서 ```vi ddd/strclass.C```에서 include가 있는 부분에 ```#include <stdio.h>```를 추가하였다.
+#### 7. `make install`
+#### 8. `vi $HOME/.bashrc` 후 `export PATH=$PATH:$HOME/ddd/bin` 추가
+#### 9. `source $HOME/.bashrc`
+#### 8. `ddd`
+  * ```Error: Can't open display:``` 오류가 뜨면서 실행이 안된다...
