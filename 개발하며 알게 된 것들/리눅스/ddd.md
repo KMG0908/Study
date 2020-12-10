@@ -27,4 +27,9 @@
 #### 8. `vi $HOME/.bashrc` 후 `export PATH=$PATH:$HOME/ddd/bin` 추가
 #### 9. `source $HOME/.bashrc`
 #### 8. `ddd`
-  * ```Error: Can't open display:``` 오류가 뜨면서 실행이 안된다...
+  * ```Error: Can't open display:``` 오류가 뜨면서 실행이 안된다...  
+    https://sourceforge.net/projects/xming/ xming 설치 후 xlaunch 실행시켜 다음-다음 계속 누르기  
+    `vi /etc/ssh/sshd_config` 후 X11Forwarding과 X11UseLocalhost 주석 풀고 yes로 변경
+    ![putty](https://1.bp.blogspot.com/-Xvyqf8xD9KQ/V6A2Isk2qjI/AAAAAAAAAiY/peAWXvcHO2YgkeOibRd4mW5mZhJX8s6qgCLcB/s1600/11.PNG)  
+    putty > Connection > SSH > X11 > Enable X11 forwarding 체크, X display location "localhost:0" 입력  
+    그리고 드디어 ddd를 실행시키는 데 성공했다!!!!!!
