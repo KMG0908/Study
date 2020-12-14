@@ -18,6 +18,10 @@
 
 * JUnit3, 4로 작성된 테스트를 실행시키는 테스트 엔진을 제공
 
+* dependency에 junit-vintage-engine 추가하여 사용
+
+  JUnit 5(org.junit.jupiter.api)와는 패키지(org.junit)이 다르기 때문에 충돌이 발생하지 않음
+
 > JUnit 5는 자바 8 이상의 런타임 환경을 요구하지만 이전 버전의 JDK로 컴파일 된 코드도 테스트 할 수 있음
 
 
@@ -42,7 +46,7 @@
 | @BeforeEach            | 각각의 테스트 메서드(@Test, @RepeatedTest, @ParameterizedTest, @TestFactory)의 실행 전에 호출되어 처리된다. JUnit 4의 @Before과 유사하다. 이러한 메서드는 재정의되지 않는 한 상속된다. |
 | @AfterEach             | 각각의 테스트 메서드(@Test, @RepeatedTest, @ParameterizedTest, @TestFactory)의 실행 후에 호출되어 처리된다. JUnit 4의 @After와 유사하다. 이러한 메서드는 재정의되지 않는 한 상속된다. |
 | @BeforeAll             | 클래스에 존재하는 모든 메서드가 실행되기 전에 한 번만 호출되어 처리된다. JUnit 4의 @BeforeClass와 유사하다. 이러한 메서드는 숨겨지거나 재정의되지 않는 한 상속되며 클래스별 테스트 인스턴스 생명주기를 사용하지 않는 경우 정적(static)이어야 한다. |
-| @AfterAll              | 클래스에 존재하는 모든 메서드가 실행된 후에 한 번만 호출되어 처리된다. JUnit 4의 @AfterClass와 유사하다. 이러한 메서드는 숨겨지거나 재정의되지 않는 한 상속되며 클래스별 테스트 인스턴스 생명주기을 사용하지 않는 경우 정적(static)이어야 한다. |
+| @AfterAll              | 클래스에 존재하는 모든 메서드가 실행된 후에 한 번만 호출되어 처리된다. JUnit 4의 @AfterClass와 유사하다. 이러한 메서드는 숨겨지거나 재정의되지 않는 한 상속되며 클래스별 테스트 인스턴스 생명주기를 사용하지 않는 경우 정적(static)이어야 한다. |
 | @Nested                | 정적이 아닌 중첩 테스트 클래스임을 나타낸다. 클래스별 테스트 인스턴스 생명주기를 사용하지 않는 한 @BeforeAll과 @AfterAll 메서드는 @Nested 테스트 클래스에서 사용될 수 없다. |
 | @Tag                   | 클래스 또는 메서드 레벨에서 필터링 테스트를 위한 태그를 선언하는 데 사용된다. TestNG의 테스트 그룹이나 JUnit 4의 카테고리와 유사하다. 이러한 어노테이션은 클래스 레벨에서는 상속되지만 메서드 레벨에서는 상속되지 않는다. |
 | @Disabled              | 테스트 클래스나 테스트 메서드를 비활성화 하는 데 사용된다. JUnit 4의 @Ignore와 유사하다. 이러한 어노테이션은 상속되지 않는다. |
@@ -388,8 +392,86 @@ public class MemberServiceTest {
 #### 2.11. Nested Tests
 
 * 테스트 클래스의 내부 클래스를 정의할 때 필요한 어노테이션이다.
+
 * 내부 클래스이므로 static 지정이 불가능하기 때문에 BeforeAll, AfterAll 선언은 불가능하다.
+
 * 단, 테스트 인스턴스 생명주기를 메서드 단위가 아닌 클래스 단위로 설정하면 사용이 가능하다.
+
+  ```java
+  class NestedExampleTest {
+  	@BeforeAll
+  	static void setUpBeforeClass() throws Exception {
+  		System.out.println("@BeforeAll - Outer Class");
+  	}
+  
+  	@AfterAll
+  	static void tearDownAfterClass() throws Exception {
+  		System.out.println("@AfterAll - Outer Class");
+  	}
+  
+  	@BeforeEach
+  	void setUp() throws Exception {
+  		System.out.println("@BeforeEach - Outer Class");
+  	}
+  
+  	@AfterEach
+  	void tearDown() throws Exception {
+  		System.out.println("@AfterEach - Outer Class");
+  	}
+  
+  	@Test
+  	void outer_test() {
+  		System.out.println("Outer Class test method");
+  	}
+  
+  	@Nested
+  	@TestInstance(Lifecycle.PER_CLASS)
+  	class InnerClass {
+  		@BeforeAll
+  		void setUpBeforeClassInner() throws Exception {
+  			System.out.println("@BeforeAll - Inner Class");
+  		}
+  
+  		@AfterAll
+  		void tearDownAfterClassInner() throws Exception {
+  			System.out.println("@AfterAll - Inner Class");
+  		}
+  
+  		@BeforeEach
+  		void setUp() throws Exception {
+  			System.out.println("@BeforeEach - Inner Class");
+  		}
+  
+  		@AfterEach
+  		void tearDown() throws Exception {
+  			System.out.println("@AfterEach - Inner Class");
+  		}
+  
+  		@Test
+  		void inner_test() {
+  			System.out.println("Inner Class test method");
+  		}
+  	}
+  }
+  
+  // 출력
+  @BeforeAll - Outer Class
+  
+  @BeforeEach - Outer Class
+  Outer Class test method
+  @AfterEach - Outer Class
+  
+  @BeforeAll - Inner Class
+  
+  @BeforeEach - Outer Class
+  @BeforeEach - Inner Class
+  Inner Class test method
+  @AfterEach - Inner Class
+  @AfterEach - Outer Class
+  
+  @AfterAll - Inner Class
+  @AfterAll - Outer Class
+  ```
 
 #### 2.12. Dependency Injection for Constructors and Methods(생성자와 메서드에 대한 의존성 주입)
 
