@@ -1,3 +1,5 @@
+## 소스 코드 정적 분석 툴
+
 ### 1. CheckStyle
 
 #### 1) 목적
@@ -202,6 +204,18 @@
 
 * pmd.xml 수정
 
+  ```xml
+  <rule name="MyJavaRule"
+        language="java"
+        message="Violation!"
+        class="com.me.MyJavaRule" >
+      <description>
+          Description
+      </description>
+      <priority>3</priority>
+  </rule>
+  ```
+
 #### 6) 참고
 
 * 룰셋을 xml 파일로 export 할 때 체크된 것이 아니라 선택된 것만 export 됨
@@ -228,7 +242,7 @@
 
 #### 3) 단점
 
-* 컴파일 된 클래스 파일에서 바이트 코드를 읽어서 사용해야 하므로 빌드 과정이 필수
+* 컴파일된 클래스 파일에서 바이트 코드를 읽어서 사용해야 하므로 빌드 과정이 필수
 
 #### 4) 설치 및 설정
 
@@ -360,14 +374,49 @@
 
 #### 7) Eclipse와 연동
 
+* 프로젝트 우클릭 > SonarLint > Bind to SonarQube or SonarCloud
 
+  <img src="../img/4_8.png" align="left">
+
+* SonarQube 선택 후 서버 주소(http://localhost:9000) 입력
+
+  <img src="../img/4_9.png" align="left">
+
+* Token 혹은 UserName+Password로 접근
+
+  <img src="../img/4_11.png" align="left">
+
+  * Token의 경우 내 계정 > 보안 탭에서 생성 가능
+
+    <img src="../img/4_10.png" align="left">
+
+* 연동할 프로젝트 선택
+
+  <img src="../img/4_12.png" align="left">
+
+* 프로젝트 키 입력
+
+  <img src="../img/4_13.png" align="left">
+
+  * 프로젝트 키는 SonarQube에서 프로젝트 > Create New Project에서 생성할 때 입력한 프로젝트 키와 동일해야 함
+
+    <img src="../img/4_14.png" align="left">
+
+* SonarQube의 가이드에 따라 프로젝트 분석 실행
+
+  <img src="../img/4_15.png" align="left">
+
+  * Window의 경우 위에 나온 명령어 대신 `gradlew.bat sonarqube -Dsonar.projectKey=Test -Dsonar.host.url=http://localhost:9000 -Dsonar.login=[토큰]`을 입력해야 함
+
+* SonarQube에서 결과 확인
+
+  <img src="../img/4_16.png" align="left">
 
 
 
 ### 5. SonarLint
 
 * SonarQube 실시간 분석 IDE 플러그인
-* 타사 분석기(checkstyle, pmd 등)로 스캔을 수행하는 SonarQube와 달리 SonarLint는 타사 분석기로 스캔을 수행하지 않음
 
 #### 1) 설치
 
@@ -379,9 +428,11 @@
 
   <img src="../img/5_1.png" align="left">
 
-* '~~~' 모양의 밑줄을 통해 확인 가능
+* '~~~' 모양의 밑줄 혹은 Window > Show View > SonarLint > SonarLint Report 창으로 확인 가능
 
   <img src="../img/5_2.png" align="left">
+  
+  <img src="../img/5_4.png" align="left">
 
 #### 2) 커스터마이징
 
@@ -391,3 +442,13 @@
 
 > Lesser General Public License
 
+
+
+## 결론
+
+* CheckStyle은 프로젝트 내에서 자체적으로 규칙을 적용할 때 사용한다. 예를 들어 서비스 클래스들은 ServiceImpl로 끝나고, 이 클래스가 참조하는 인터페이스는 Service로 끝나야 하는 상황일 때라던가.
+* PMD는 미사용 변수, 비어 있는 코드 블락과 같이 결함을 유발할 수 있는 코드를 검사할 때 사용한다. 실제 결함보다는 잠재적인 결함을 찾아주는 역할을 한다.
+* SpotBugs는 CheckStyle과 PMD와 달리 컴파일된 바이트 코드를 이용해 분석을 하고, 실제 결함을 찾아주는 정확성이 높은 편이다.
+* SonarLint는 화면에서 바로바로 확인을 하고 싶을 때 사용하면 좋다. 다른 것들은 직접 실행을 시켜줘야 하지만, SonarLint는 즉각적인 반응이 가능하다.
+  * CheckStyle도 즉각적인 반응이 가능하지만 CheckStyle은 코딩 규약에 적합한지만 체크하니까 제외
+* SonarQube는 결과를 대시보드를 통해 직관적으로 확인할 수 있다. 
