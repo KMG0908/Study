@@ -24,7 +24,7 @@
 ① Plug-in
 
 * Help > Install New Software
-   
+  
    <img src="../img/1_1.png">
 
 * http://eclipse-cs.sf.net/update/ 주소 추가 후 Checkstyle 플러그인 선택
@@ -450,5 +450,5 @@
 * PMD는 미사용 변수, 비어 있는 코드 블락과 같이 결함을 유발할 수 있는 코드를 검사할 때 사용한다. 실제 결함보다는 잠재적인 결함을 찾아주는 역할을 한다.
 * SpotBugs는 CheckStyle과 PMD와 달리 컴파일된 바이트 코드를 이용해 분석을 하고, 실제 결함을 찾아주는 정확성이 높은 편이다.
 * SonarLint는 화면에서 바로바로 확인을 하고 싶을 때 사용하면 좋다. 다른 것들은 직접 실행을 시켜줘야 하지만, SonarLint는 즉각적인 반응이 가능하다.
-  * CheckStyle도 즉각적인 반응이 가능하지만 CheckStyle은 코딩 규약에 적합한지만 체크하니까 제외
+  * CheckStyle도 즉각적인 반응이 가능하지만 CheckStyle은 코딩 규약에 적합한지만 체크하니까 제외했다.
 * SonarQube는 결과를 대시보드를 통해 직관적으로 확인할 수 있다. 
