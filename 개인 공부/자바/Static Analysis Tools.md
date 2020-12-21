@@ -24,7 +24,8 @@
 ① Plug-in
 
 * Help > Install New Software
-    <img src="../img/1_1.png">
+   
+   <img src="../img/1_1.png">
 
 * http://eclipse-cs.sf.net/update/ 주소 추가 후 Checkstyle 플러그인 선택
 
