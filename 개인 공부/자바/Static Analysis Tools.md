@@ -25,7 +25,7 @@
 
 * Help > Install New Software
 
-  <img src="../img/1_1.png" align="left">
+  <img src="../img/1_1.png" align="left"><br/>
 
 * http://eclipse-cs.sf.net/update/ 주소 추가 후 Checkstyle 플러그인 선택
 
