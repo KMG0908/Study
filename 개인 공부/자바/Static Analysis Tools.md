@@ -1,3 +1,19 @@
+## 개요
+
+### 왜 정적 분석이 필요한가?
+
+* 완성되지 않은 코드에 대해서도 분석이 가능
+
+  → 동적 테스트보다 이른 시점에 버그를 찾아낼 수 있음 
+
+  \+ 동적 테스트보다 비교적 적은 시간에 버그를 찾아낼 수 있음
+
+* 버그 뿐만 아니라 개선의 여지가 있는 코드들도 잘 찾아줌
+
+* 코딩 스타일 가이드에 관한 규칙 제공
+
+
+
 ## 소스 코드 정적 분석 툴
 
 ### 1. CheckStyle
@@ -19,7 +35,40 @@
 
 * 실제 버그를 찾을 수 없음
 
-#### 4) 설치 및 설정
+#### 4) 탐지 유형
+
+* Annotations
+* Block Checks
+* Class Design
+* Coding
+* Duplicate Code
+* Headers
+* Imports
+* Javadoc Comments
+* Metrics
+* Miscellaneous
+* Modifiers
+* Naming Conventions
+* Regexp
+* Size Violations
+* Whitespace
+
+##### 예시
+
+| **범주**           | **설명**                                                 |
+| ------------------ | -------------------------------------------------------- |
+| Javadoc Comments   | 패키지, 메소드, 변수에 대한 문서화 스타일 검사           |
+| Naming Conventions | 표준 명명 규약 검사를 위한 규칙                          |
+| Imports            | 불필요하거나 중복된 Import 검사                          |
+| Size Violations    | 과도하게 긴 문장, 메소드 혹은 많은 매개변수              |
+| Blocks             | 불필요하거나 필요하지만 생략된 괄호 검사                 |
+| Coding Problems    | 하드코딩, 불필요한 표현이나 문장 검사                    |
+| Class Design       | 불필요하거나 필요하지만 생략된 Modifier 또는 생성자 검사 |
+| Miscellaneous      | 배열 스타일, 매개변수 스타일 등의 기타 스타일 규칙       |
+
+>  Sun 코딩 스타일 규칙 중 일부
+
+#### 5) 설치 및 설정
 
 ① Plug-in
 
@@ -76,7 +125,7 @@
 
   <img src="../img/1_10.png">
 
-#### 5) 커스터마이징
+#### 6) 커스터마이징
 
 ① Plug-in
 
@@ -122,7 +171,49 @@
 
 * 복제된 코드를 찾는 속도가 느림
 
-#### 4) 설치 및 설정
+  #### 4) 점검 기준
+
+  ① 표준 코드 기준(Compliance with coding standards)
+
+  * 명명 규칙: 클래스, 메소드, 파라미터, 변수 이름
+  * 클래스 및 메서드 길이
+  * 주석 및 JavaDocs의 존재 및 서식
+
+  ② 코드 안티 패턴(Coding Antipatterns)
+
+  * 비어 있는 try / catch / finally / switch 블록
+  * 사용되지 않은 지역 변수, 파라미터, Private 메서드
+  * 비어 있는 if / while 구문
+  * 너무 복잡한 표현(불필요한 if 구문, 무한 루프에 빠질 수 있는 for 루프)
+  * 높은 복잡성 지표를 가진 클래스
+
+  ③ CPD(Cut And Paste Detector)
+
+  * 의심스러운 코드 복사를 찾는 도구
+  * CPD는 최소 크기의 코드 블락에 의해 매개변수화 될 수 있음
+
+  #### 5) 탐지 유형
+
+| 점검 항목                                              | 점검 내용                                                    | 예시                                                         |
+| ------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Basic<br/>(rulesets/basic.xml)                         | 대부분의 개발자들이 동의하는 규칙                            | catch 블록들은 비어있어서는 안 된다,<br/> equals()를 overriding 할 때 마다 hashCode()를 override한다. |
+| Naming <br/>(rulesets/naming.xml)                      | 표준 자바 naming 규약을 위한 테스트                          | 변수 이름들은 너무 짧아서는 안 된다,<br/> 메소드 이름은 너무 길어서는 안 된다, <br/>클래스 이름은 대문자로 시작해야 한다, <br/>메소드와 필드 이름들은 소문자로 시작해야 한다 |
+| Unused code <br/>(rulesets/unusedcode.xml)             | 불필요한 코드 제거                                           | 결코 읽히지 않은 private field와 local variable, <br/>접근할 수 없는 문장, 결코 호출되지 않는private method 등 |
+| Design <br/>(rulesets/design.xml)                      | 디자인 원리 체크                                             | switch 문장은 default 블록을 갖고 있어야 한다, <br/>심하게 중첩된 if 블록은 피해야 한다 |
+| Import statements <br/>(rulesets/imports.xml)          | import 문장에 대한 문제들점검                                | 같은 클래스를 두 번 반입하는 것, <br/>java.lang에서 클래스를 import하는 것 |
+| JUnit tests <br/>(rulesets/junit.xml)                  | Test Case와 Test Method 관련 특정 문제 검색                  | Method 이름의 정확한 스펠링 등                               |
+| Strings<br/>(rulesets/string.xml)                      | 스트링 관련 작업을 할 때 발생하는 일반적인 문제들 규명       |                                                              |
+| Braces <br/>(rulesets/braces.xml)                      | for, if, while, else 문장이 괄호를 사용하는지 여부 검사      |                                                              |
+| Code size <br/>(rulesets/codesize.xml)                 | 과도하게 긴 메소드, 너무 많은 메소드를 가진 클래스 검사      |                                                              |
+| Javabeans <br/>(rulesets/javabeans.xml)                | 직렬화 될 수 없는 bean 클래스같이 JavaBeans 코딩 규약을 위배하는 JavaBeans 컴포넌트 검사 |                                                              |
+| Finalizers                                             | finalize() 메소드 관련한 다양한 문제들을 검사                | 비어있는 finalizer,<br/> 다른 메소드를 호출하는 finalize() 메소드,finalize()로의 호출 등 |
+| Clone<br/>(rulesets/clone.xml)                         | clone() 메소드에 대한 규칙                                   | clone()을 오버라이드하는 클래스는 Cloneable을 구현해야 한다  |
+| Coupling <br/>(rulesets/coupling.xml)                  | 클래스들간 과도한 커플링 표시 검색                           | 지나치게 많은 import, 너무 적은 필드, 변수, 클래스 내의 리턴 유형 등 |
+| Strict exceptions <br/>(rulesets/ strictexception.xml) | 예외 테스트                                                  | 메소드는 java.lang.Exception을 발생 시키도록 선언되어서는 안 됨, 예외는 플로우 제어에 사용 되어서는 안 됨 |
+| Controversial <br/>(rulesets/controversial.xml)        | 좀 더 의심스러운 검사                                        | 변수에 null 할당하기                                         |
+| Logging<br/>(rulesets/logging-java.xml)                | java.util.logging.Logger를 위험하게 사용하는 경우 검색       | 끝나지 않고 정적이지 않은 logger와 한 클래스 에 한 개 이상의 logger 등 |
+
+#### 6) 설치 및 설정
 
 ① Plug-in
 
@@ -183,7 +274,7 @@
 
   <img src="../img/2_6.png">
 
-#### 5) 커스터마이징
+#### 7) 커스터마이징
 
 | 속성명                    | 비고                                      |
 | ------------------------- | ----------------------------------------- |
@@ -216,7 +307,7 @@
   </rule>
   ```
 
-#### 6) 참고
+#### 8) 참고
 
 * 룰셋을 xml 파일로 export 할 때 체크된 것이 아니라 선택된 것만 export 됨
 
@@ -244,7 +335,21 @@
 
 * 컴파일된 클래스 파일에서 바이트 코드를 읽어서 사용해야 하므로 빌드 과정이 필수
 
-#### 4) 설치 및 설정
+#### 4) 탐지 유형
+
+| 탐지 유형                    | 사례 및 설명                                                 |
+| ---------------------------- | ------------------------------------------------------------ |
+| Bad practice                 | 클래스 명명규칙, null 처리 실수 등 개발자의 나쁜 습관을 탐지 |
+| Correctness                  | 잘못된 상수, 무의미한 메소드 호출 등 문제의 소지가 있는 코드를 탐지 |
+| Dodgy code                   | int의 곱셈결과를 long으로 변환하는 등 부정확하거나 오류를 발생시킬 수 있는 코드를 탐지 |
+| Experimental                 | 메소드에서 생성된 stream이나 리소스가 해제하지 못한 코드를 탐지 |
+| Internationalization         | Default 인코딩을 지정하지 않은 경우 등 지역특성을 고려하지 않은 코드 탐지 |
+| Malicious code vulnerability | 보안 코드에 취약한 가변적인 배열이나 콜렉션, Hashtable 탐지  |
+| Multithreaded correctness    | 멀티쓰레드에 안전하지 않은 객체 사용 등을 탐지               |
+| Performance                  | 미사용 필드, 비효율적 객체생성 등 성능에 영향을 주는 코드를 탐지 |
+| Security                     | CSS, DB 패스워드 누락 등 보안에 취약한 코드를 탐지           |
+
+#### 5) 설치 및 설정
 
 ① Plug-in
 
@@ -299,7 +404,7 @@
 
     <img src="../img/3_5.png">
 
-#### 5) 커스터마이징
+#### 6) 커스터마이징
 
 ① Plug-in
 
@@ -378,7 +483,7 @@
 
   <img src="../img/4_8.png">
 
-* SonarQube 선택 후 서버 주소(http://localhost:9000) 입력
+  * SonarQube 선택 후 서버 주소(http://localhost:9000) 입력
 
   <img src="../img/4_9.png">
 
@@ -417,6 +522,10 @@
 ### 5. SonarLint
 
 * SonarQube 실시간 분석 IDE 플러그인
+
+* SonarQube는 타사 분석기(SpotBugs, CheckStyle, PMD)로도 스캔을 수행하지만 SonarLint는 그렇지 않음
+
+  > SonarQube에서 CheckStyle 사용 방법은 https://dololgun.github.io/checkstyle/chekcstyle-sonarqube-plugin/ 를 참고할 것
 
 #### 1) 설치
 
