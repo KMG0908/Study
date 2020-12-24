@@ -74,23 +74,23 @@
 
 * Help > Install New Software
   
-   <img src="../img/1_1.png">
+   <img src="../img/sat/1_1.png">
 
 * http://eclipse-cs.sf.net/update/ 주소 추가 후 Checkstyle 플러그인 선택
 
-  <img src="../img/1_2.png">
+  <img src="../img/sat/1_2.png">
 
 * 프로젝트 우클릭 > Properties > Checkstyle
 
-  <img src="../img/1_3.png">
+  <img src="../img/sat/1_3.png">
 
 * 화면 혹은 Window > Show View > Other > Checkstyle > Checkstyle violations 창으로 확인 가능
 
-  <img src="../img/1_4.png"> 
+  <img src="../img/sat/1_4.png"> 
 
   
 
-  <img src="../img/1_11.png">
+  <img src="../img/sat/1_11.png">
 
 ② Gradle
 
@@ -119,11 +119,11 @@
   }
   ```
 
-* `gradlew clean build` 혹은 Gradle Tasks > vertification > check
+* `gradlew clean build` 혹은 Gradle Tasks > verification > check
 
 * 리포트 파일이 위치한 디렉토리의 main.html을 통해 확인 가능
 
-  <img src="../img/1_10.png">
+  <img src="../img/sat/1_10.png">
 
 #### 6) 커스터마이징
 
@@ -131,21 +131,21 @@
 
 * 프로젝트 우클릭 > Properties > Checkstyle > Local Check Configurations
 
-  <img src="../img/1_5.png">
+  <img src="../img/sat/1_5.png">
 
 * 설정 파일 생성
 
-  <img src="../img/1_6.png">
+  <img src="../img/sat/1_6.png">
 
   * 설정 파일 타입: 내부 설정 파일 / 외부 설정 파일 import / 원격 설정 파일 import / 다른 프로젝트 설정 파일 import
 
 * 더블 클릭하여 수정
 
-  <img src="../img/1_7.png">
+  <img src="../img/sat/1_7.png">
 
-  <img src="../img/1_8.png">
+  <img src="../img/sat/1_8.png">
 
-  <img src="../img/1_9.png">
+  <img src="../img/sat/1_9.png">
 
 ② Gradle
 
@@ -190,7 +190,7 @@
 ③ CPD(Cut And Paste Detector)
 
 * 의심스러운 코드 복사를 찾는 도구
-* CPD는 최소 크기의 코드 블락에 의해 매개변수화 될 수 있음
+* CPD는 최소 크기의 코드 블록에 의해 매개변수화 될 수 있음
 
 #### 5) 탐지 유형
 
@@ -219,29 +219,29 @@
 
 * Help > Install New SoftWare
 
-  <img src="../img/1_1.png">
+  <img src="../img/sat/1_1.png">
 
 * https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/ 주소 추가 후 PMD 플러그인 선택
 
-  <img src="../img/2_1.png">
+  <img src="../img/sat/2_1.png">
 
 * Window > Preferences > PMD > Rule Configuration
 
-  <img src="../img/2_2.png">
+  <img src="../img/sat/2_2.png">
 
 * 프로젝트 혹은 파일 우클릭 > PMD > Check Code
 
-  <img src="../img/2_3.png">
+  <img src="../img/sat/2_3.png">
 
 * Open Perspective > PMD 창에서 Violations Outline 창을 통해 확인 가능
 
-  <img src="../img/2_4.png">
+  <img src="../img/sat/2_4.png">
 
   * 클릭 시 해당 소스로 이동
 
 * 규칙의 우선순위를 1단계에서 5단계로 분류하며 값이 낮을 수록 높은 위험을 가짐
 
-  <img src="../img/2_5.png">
+  <img src="../img/sat/2_5.png">
 
 ② Gradle
 
@@ -268,11 +268,11 @@
 
   > checkstyle은 toolVersion을 명시하지 않아도 오류가 나지 않는 반면에 pmd는 toolVersion을 명시하지 않으면 오류가 난다(check는 성공하지만 main.html을 보면 오류가 발생해 있음). 정확한 원인은 모르겠지만 아마도 checkstyle은 default 버전이 오류가 안 나는 버전이고, pmd는 default 버전이 오류가 나는 버전이라 그런 거 아닐까 싶다. **확실하진 않음!**
 
-* `gradlew clean build` 혹은 Gradle Tasks > vertification > check
+* `gradlew clean build` 혹은 Gradle Tasks > verification > check
 
 * 리포트 파일이 위치한 디렉터리의 main.html에서 확인 가능
 
-  <img src="../img/2_6.png">
+  <img src="../img/sat/2_6.png">
 
 #### 7) 커스터마이징
 
@@ -289,7 +289,7 @@
 
 * Window > Preferences > PMD > Rule Configuration의 Rule 탭을 통해 수정
 
-  <img src="../img/2_7.png">
+  <img src="../img/sat/2_7.png">
 
 ② Gradle
 
@@ -311,7 +311,7 @@
 
 * 룰셋을 xml 파일로 export 할 때 체크된 것이 아니라 선택된 것만 export 됨
 
-  <img src="../img/2_8.png">
+  <img src="../img/sat/2_8.png">
 
 > BSD-style License
 
@@ -355,19 +355,19 @@
 
 * Help > Eclipse Marketplace
 
-  <img src="../img/3_1.png">
+  <img src="../img/sat/3_1.png">
 
 * spotbugs 검색 후 install
 
-  <img src="../img/3_2.png">
+  <img src="../img/sat/3_2.png">
 
 * 프로젝트 우클릭 > SpotBugs > Find Bugs
 
-  <img src="../img/3_3.png">
+  <img src="../img/sat/3_3.png">
 
 * Open Perspective > SpotBugs > Bug Explorer 창에서 확인 가능
 
-  <img src="../img/3_4.png">
+  <img src="../img/sat/3_4.png">
 
 ② Gradle
 
@@ -394,7 +394,7 @@
   }
   ```
 
-* `gradlew clean build` 혹은 Gradle Tasks > vertification > check
+* `gradlew clean build` 혹은 Gradle Tasks > verification > check
 
 * 리포트 파일이 위치한 디렉터리의 main.xml에서 확인 가능
 
@@ -402,7 +402,7 @@
 
   * html로 확인하고 싶으면 `xml.enabled = true` 대신에 `html.enabled = true` 를 사용해야 함
 
-    <img src="../img/3_5.png">
+    <img src="../img/sat/3_5.png">
 
 #### 6) 커스터마이징
 
@@ -410,7 +410,7 @@
 
 * Window > Preference > Java > SpotBugs의 Detector configuration 탭을 통해 수정
 
-  <img src="../img/3_6.png">
+  <img src="../img/sat/3_6.png">
 
 ② Gradle
 
@@ -430,7 +430,7 @@
 
 * 프로그램 설치 후 사용 가능한 강력하고 단순한 웹 모니터링 UI 대시보드를 제공
 * 테이블과 차트를 이용하여 시간이 지남에 따라 프로젝트가 얼마나 개선되고 있는지를 보여줌
-* 코딩 품질 개선을 위한 정보인 소스의 중복이나 복잡도, 유닛 테이스트의 커버리지 및 잠재적인 버그 정보 등을 프로젝트 단위부터 파일 단위까지 제공
+* 코딩 품질 개선을 위한 정보인 소스의 중복이나 복잡도, 유닛 테스트의 커버리지 및 잠재적인 버그 정보 등을 프로젝트 단위부터 파일 단위까지 제공
 
 #### 3) 단점
 
@@ -440,11 +440,11 @@
 
 * https://www.sonarqube.org/downloads/ 에서 다운로드 후 설치
 
-  <img src="../img/4_1.png">
+  <img src="../img/sat/4_1.png">
 
 * sonarqube > bin > windows-x86-64 > StarSonar.bat 실행
 
-  <img src="../img/4_2.png">
+  <img src="../img/sat/4_2.png">
 
   * `Error: Could not create the Java Virtual Machine.` 에러 발생 시 자바 버전 확인해볼 것
     * java 15에서는 서버 실행을 지원하지 않고 에러에서 언급한 jvm 옵션은 java 14와 함께 제거되었기 때문에 java 11을 사용해야 함
@@ -455,67 +455,67 @@
 
 * Administration > Marketplace 이동
 
-  <img src="../img/4_3.png">
+  <img src="../img/sat/4_3.png">
 
   * 언어마다 분석을 위해 Code Analyzer 설치 필요
 
     * Java, Korean pack 설치
 
-      <img src="../img/4_4.png">
+      <img src="../img/sat/4_4.png">
 
-      <img src="../img/4_5.png">
+      <img src="../img/sat/4_5.png">
 
 #### 5) 유저 관리
 
 * 환경설정(Administration) > 시큐리티(Security) > 사용자(User)
 
-  <img src="../img/4_6.png">
+  <img src="../img/sat/4_6.png">
 
 #### 6) 그룹 관리
 
 * 환경설정(Administration) > 시큐리티(Security) > 그룹(Group)
 
-  <img src="../img/4_7.png">
+  <img src="../img/sat/4_7.png">
 
 #### 7) Eclipse와 연동
 
 * 프로젝트 우클릭 > SonarLint > Bind to SonarQube or SonarCloud
 
-  <img src="../img/4_8.png">
+  <img src="../img/sat/4_8.png">
 
   * SonarQube 선택 후 서버 주소(http://localhost:9000) 입력
 
-  <img src="../img/4_9.png">
+  <img src="../img/sat/4_9.png">
 
 * Token 혹은 UserName+Password로 접근
 
-  <img src="../img/4_11.png">
+  <img src="../img/sat/4_11.png">
 
   * Token의 경우 내 계정 > 보안 탭에서 생성 가능
 
-    <img src="../img/4_10.png">
+    <img src="../img/sat/4_10.png">
 
 * 연동할 프로젝트 선택
 
-  <img src="../img/4_12.png">
+  <img src="../img/sat/4_12.png">
 
 * 프로젝트 키 입력
 
-  <img src="../img/4_13.png">
+  <img src="../img/sat/4_13.png">
 
   * 프로젝트 키는 SonarQube에서 프로젝트 > Create New Project에서 생성할 때 입력한 프로젝트 키와 동일해야 함
 
-    <img src="../img/4_14.png">
+    <img src="../img/sat/4_14.png">
 
 * SonarQube의 가이드에 따라 프로젝트 분석 실행
 
-  <img src="../img/4_15.png">
+  <img src="../img/sat/4_15.png">
 
   * Window의 경우 위에 나온 명령어 대신 `gradlew.bat sonarqube -Dsonar.projectKey=Test -Dsonar.host.url=http://localhost:9000 -Dsonar.login=[토큰]`을 입력해야 함
 
 * SonarQube에서 결과 확인
 
-  <img src="../img/4_16.png">
+  <img src="../img/sat/4_16.png">
 
 
 
@@ -531,23 +531,23 @@
 
 * Help > Eclipse MarketPlace
 
-  <img src="../img/3_1.png">
+  <img src="../img/sat/3_1.png">
 
 * SonarLint 검색 후 설치
 
-  <img src="../img/5_1.png">
+  <img src="../img/sat/5_1.png">
 
 * '~~~' 모양의 밑줄 혹은 Window > Show View > SonarLint > SonarLint Report 창으로 확인 가능
 
-  <img src="../img/5_2.png">
+  <img src="../img/sat/5_2.png">
   
-  <img src="../img/5_4.png">
+  <img src="../img/sat/5_4.png">
 
 #### 2) 커스터마이징
 
 * Window > Preferences > SonarLint > Rules Configuration에서 수정
 
-  <img src="../img/5_3.png">
+  <img src="../img/sat/5_3.png">
 
 > Lesser General Public License
 
@@ -556,7 +556,7 @@
 ## 결론
 
 * CheckStyle은 프로젝트 내에서 자체적으로 규칙을 적용할 때 사용한다. 예를 들어 서비스 클래스들은 ServiceImpl로 끝나고, 이 클래스가 참조하는 인터페이스는 Service로 끝나야 하는 상황일 때라던가.
-* PMD는 미사용 변수, 비어 있는 코드 블락과 같이 결함을 유발할 수 있는 코드를 검사할 때 사용한다. 실제 결함보다는 잠재적인 결함을 찾아주는 역할을 한다.
+* PMD는 미사용 변수, 비어 있는 코드 블록과 같이 결함을 유발할 수 있는 코드를 검사할 때 사용한다. 실제 결함보다는 잠재적인 결함을 찾아주는 역할을 한다.
 * SpotBugs는 CheckStyle과 PMD와 달리 컴파일된 바이트 코드를 이용해 분석을 하고, 실제 결함을 찾아주는 정확성이 높은 편이다.
 * SonarLint는 화면에서 바로바로 확인을 하고 싶을 때 사용하면 좋다. 다른 것들은 직접 실행을 시켜줘야 하지만, SonarLint는 즉각적인 반응이 가능하다.
   * CheckStyle도 즉각적인 반응이 가능하지만 CheckStyle은 코딩 규약에 적합한지만 체크하니까 제외했다.
