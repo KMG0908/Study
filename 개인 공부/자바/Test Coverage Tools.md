@@ -347,7 +347,7 @@ jacocoTestCoverageVerification {
 * 테스트 코드가 액세스한 코드의 백분율을 계산하는 무료 자바 툴로서 jcoverage에 기반을 둠
 * Ant, Maven, Command Line에서 실행 가능
 
-#### 2) 설치
+#### 2) 설정
 
 ##### Cobertura 플러그인 추가
 
@@ -382,7 +382,10 @@ jacocoTestCoverageVerification {
 
 #### 1) 개념
 
-#### 2) 설치
+* Condition 커버리지 측정 가능
+* Complexity 분석 가능
+
+#### 2) 설정
 
 ##### Clover 플러그인 추가
 
@@ -418,6 +421,12 @@ jacocoTestCoverageVerification {
 
   <img src="../img/tct/3_1.png">
 
+> 주의사항? 문제점?
+>
+> * src/test/java에 있는 것을 testcase로 인식하지 않아 No test results가 뜸
+> * JUnit 5를 지원하지 않음 
+>   * JUnit 5로 실행시 Code coverage는 0%가 뜸
+
 
 
 ### 4. SonarQube
@@ -426,7 +435,55 @@ jacocoTestCoverageVerification {
 
 * 생성된 코드 커버리지 결과를 분석하여 보여줌
 
-#### 2) 설치
+#### 2) 설정
 
-##### SonarQube 태스크 정의
+> [SonarQube 설치](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%20%EA%B3%B5%EB%B6%80/%EC%9E%90%EB%B0%94/Static%20Analysis%20Tools.md#4-sonarqube)
+>
+> [JaCoCo](https://github.com/KMG0908/Study/blob/master/%EA%B0%9C%EC%9D%B8%20%EA%B3%B5%EB%B6%80/%EC%9E%90%EB%B0%94/Test%20Coverage%20Tools.md#2-%EC%84%A4%EC%A0%95)
 
+##### SonarQube 태스크 추가
+
+```groovy
+sonarqube { 
+	properties { 
+		property "sonar.projectKey", "CoverageTest" 
+		property "sonar.projectName", "CoverageTest" 
+		property "sonar.sources", "src/main/java" 
+		property "sonar.tests", "src/test/java" 
+		property "sonar.java.binaries", "build/classes/java/main/" 
+		property "sonar.jacoco.reportPaths", "build/jacoco/test.exec" 
+	} 
+}
+```
+
+> [property 종류](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-gradle/)
+
+##### 테스트 실행
+
+* jacoco report 생성
+
+  ```
+  gradlew jacocoTestReport
+  ```
+
+* sonarqube 분석 실행
+
+  ```
+  gradlew sonarqube 
+  -Dsonar.projectKey=CoverageTest   
+  -Dsonar.host.url=http://localhost:9000   
+  -Dsonar.login=${Token}
+  ```
+
+  > 가독성을 위해 라인을 구분했지만 윈도우에서 실행시 한 줄에 적어야 함
+
+> 주의사항
+>
+> * SonarQube의 커버리지 기능은 생성된 코드 커버리지 결과를 바탕으로 분석만 진행하는 것이기 때문에 sonarqube 분석을 실행하기 전에 코드 커버리지 report가 존재하고 있어야 함!
+> * 그렇지 않을 경우 Coverage가 제대로 반영되지 않아 0.0%로 뜸
+
+* 확인: 프로젝트 화면 혹은 해당 프로젝트 > 측정 지표 > 커버리지
+
+  <img src="../img/tct/4_1.png">
+
+  <img src="../img/tct/4_2.png">
