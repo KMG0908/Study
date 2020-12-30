@@ -338,3 +338,95 @@ jacocoTestCoverageVerification {
 >
 > if나 switch 같은 분기 조건문에 대해서 테스트가 얼마나 커버하고 있느냐를 나타내는 수치
 
+
+
+### 2. Cobertura
+
+#### 1) 개념
+
+* 테스트 코드가 액세스한 코드의 백분율을 계산하는 무료 자바 툴로서 jcoverage에 기반을 둠
+* Ant, Maven, Command Line에서 실행 가능
+
+#### 2) 설치
+
+##### Cobertura 플러그인 추가
+
+* build.gradle에 플러그인 추가 후 플러그인 설정
+
+  ```groovy
+  plugins {
+      id "net.saliman.cobertura" version "4.0.0"
+  }
+  
+  cobertura {
+  	coverageFormats = ['html', 'xml']
+  	coverageReportDir = file("$buildDir/cobertura")
+  	coverageCheckBranchRate = 90
+  	coverageCheckLineRate = 90
+  }
+  ```
+
+##### 테스트 실행
+
+* 실행 명령어
+
+  ```
+  gradlew cobertura
+  ```
+
+* 확인 경로: `$buildDir/cobertura/index.html` 
+
+
+
+### 3. Clover
+
+#### 1) 개념
+
+#### 2) 설치
+
+##### Clover 플러그인 추가
+
+* build.gradle에 플러그인과 디펜던시 추가 후 플러그인 설정
+
+  ```groovy
+  plugins {
+      id "com.bmuschko.clover" version "3.0.1"
+  }
+  
+  dependencies {
+      clover 'org.openclover:clover:4.4.1'
+  }
+  
+  clover {
+  	report {
+          html = true
+          pdf = true
+          xml = true
+      }
+  }
+  ```
+
+##### 테스트 실행
+
+* 실행 명령어
+
+  ```
+  gradlew cloverGenerateReport
+  ```
+
+* 확인경로: `$buildDir/reports/clover/html/index.html`
+
+  <img src="../img/tct/3_1.png">
+
+
+
+### 4. SonarQube
+
+#### 1) 개념
+
+* 생성된 코드 커버리지 결과를 분석하여 보여줌
+
+#### 2) 설치
+
+##### SonarQube 태스크 정의
+
