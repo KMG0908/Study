@@ -9,6 +9,20 @@
   * 테스트 대상을 얼마만큼 테스트 했나를 정의하는 것
   * 테스트의 정확성을 판단하는 하나의 척도
 
+### 왜 테스트를 작성해야 하는가?
+
+* 코드의 버그를 파악할 수 있음
+
+* 배포 전에 최소한의 안정성을 기대할 수 있음
+
+* 코드 리뷰가 쉬워짐
+
+  * 작성된 코드는 어떻게 사용되는가?
+  * 작성된 코드는 어떤 기능인가?
+  * 작성된 코드에서 주의해야 할 점은 무엇인가?
+
+  > 위의 세가지를 쉽게 파악할 수 있음
+
 
 
 ## 테스트 커버리지 툴
@@ -17,7 +31,7 @@
 
 #### 1) 개념
 
-* Java 코드의 커버리지를 체크하는 라이브러리
+* 자바 코드 커버리지를 체크하는 데에 사용되는 오픈소스 라이브러리
 * 테스트 코드를 돌리고 그 커버리지 결과를 보기 좋도록 html이나 xml, csv 같은 리포트로 생성
 * 테스트 결과가 설정한 커버리지 기준을 만족하는지 확인하는 기능도 있음
 
@@ -50,7 +64,7 @@
     * 쉽게 눈으로 확인하기 위해 html 파일로 리포트 생성 가능
     * SonarQube 등으로 연동하기 위해 xml, csv 같은 형태로도 리포트 생성 가능
   * jacocoTestCoverageVerification
-    * 자신이 원하는 커버리지 기준을 만족하는지 확인해 주는 task
+    * 자신이 원하는 커버리지 기준을 만족하는지 확인해주는 task
     * ex) 브랜치 커버리지를 최소한 80% 이상으로 유지하고 싶다면 이 task에 설정하면 됨
 
   ```groovy
@@ -345,7 +359,7 @@ jacocoTestCoverageVerification {
 #### 1) 개념
 
 * 테스트 코드가 액세스한 코드의 백분율을 계산하는 무료 자바 툴로서 jcoverage에 기반을 둠
-* Ant, Maven, Command Line에서 실행 가능
+* Ant, Maven, Gradle, Command Line에서 실행 가능
 
 #### 2) 설정
 
@@ -375,6 +389,12 @@ jacocoTestCoverageVerification {
   ```
 
 * 확인 경로: `$buildDir/cobertura/index.html` 
+
+> 주의사항
+>
+> * Java 11을 지원하지 않음(https://github.com/cobertura/cobertura/issues/381)
+>
+>   <img src="../img/tct/2_1.png">
 
 
 
@@ -421,7 +441,7 @@ jacocoTestCoverageVerification {
 
   <img src="../img/tct/3_1.png">
 
-> 주의사항? 문제점?
+> 주의사항
 >
 > * src/test/java에 있는 것을 testcase로 인식하지 않아 No test results가 뜸
 > * JUnit 5를 지원하지 않음 
